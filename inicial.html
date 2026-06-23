@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WORLD CUP 2026 Forecast</title>
+</head>
+
+<body>
+    <div class="fundo">
+        <p>WORLD CUP 2026 Forecast</p>
+        <div class="cards">
+            <div class="resultado">
+                <p id="campeao"><br>é a campeã do mundo</p>
+                <button onclick="simular()" class="btn-formulario">Simular</button>
+            </div>
+        </div>
+
+        <div class="card-resultados">
+            <div class="resultados">
+                <p>Final</p>
+                <p id="final_0"></p> x <p id="final_1"></p> <br>
+                <p>Semi-Final</p>
+                <p id="semifinal_0"></p> x <p id="semifinal_1"></p> <br>
+                <p id="semifinal_2"></p> x <p id="semifinal_3"></p> <br>
+                <p>Quartas</p>
+                <p id="quartas_0"></p> x <p id="quartas_1"></p> <br>
+                <p id="quartas_2"></p> x <p id="quartas_3"></p> <br>
+                <p id="quartas_4"></p> x <p id="quartas_5"></p> <br>
+                <p id="quartas_6"></p> x <p id="quartas_7"></p> <br>
+                <p>Oitavas</p>
+                <p id="oitavas_0"></p> x <p id="oitavas_1"></p> <br>
+                <p id="oitavas_2"></p> x <p id="oitavas_3"></p> <br>
+                <p id="oitavas_4"></p> x <p id="oitavas_5"></p> <br>
+                <p id="oitavas_6"></p> x <p id="oitavas_7"></p> <br>
+                <p id="oitavas_8"></p> x <p id="oitavas_9"></p> <br>
+                <p id="oitavas_10"></p> x <p id="oitavas_11"></p> <br>
+                <p id="oitavas_12"></p> x <p id="oitavas_13"></p> <br>
+                <p id="oitavas_14"></p> x <p id="oitavas_15"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    selecoes = [{
+        "nome": "França",
+        "overall": 99
+    },
+    {
+        "nome": "Argentina",
+        "overall": 95
+    },
+    {
+        "nome": "Espanha",
+        "overall": 93
+    },
+    {
+        "nome": "Inglaterra",
+        "overall": 88
+    },
+    {
+        "nome": "Brasil",
+        "overall": 80
+    },
+    {
+        "nome": "Marrocos",
+        "overall": 75
+    },
+    {
+        "nome": "Holanda",
+        "overall": 71
+    },
+    {
+        "nome": "Alemanha",
+        "overall": 70
+    },
+    {
+        "nome": "Portugal",
+        "overall": 68
+    },
+    {
+        "nome": "Bélgica",
+        "overall": 65
+    },
+    {
+        "nome": "México",
+        "overall": 60
+    },
+    {
+        "nome": "Colombia",
+        "overall": 59
+    },
+    {
+        "nome": "USA",
+        "overall": 55
+    },
+    {
+        "nome": "Croácia",
+        "overall": 54
+    },
+    {
+        "nome": "Japão",
+        "overall": 53
+    },
+    {
+        "nome": "Suiça",
+        "overall": 50
+    }]
+
+    function simular() {
+        let pontuacao_a = 0
+        let pontuacao_b = 0
+        let pontuacao_axl_a = 0
+        let pontuacao_axl_b = 0
+        let nome_a = ""
+        let nome_b = ""
+        let vetor_axl = []
+        let vetor_pontuacao = []
+        let vetor_axl_semi = []
+        let vetor_pontuacao_semi = []
+        let vetor_axl_final = []
+        let vetor_pontuacao_final = []
+
+
+        for (let i = 0; i < 8; i++) {
+            nome_a = selecoes[i].nome
+            nome_b = selecoes[selecoes.length - 1 - i].nome
+            pontuacao_a = selecoes[i].overall
+            pontuacao_b = selecoes[selecoes.length - 1 - i].overall
+            const id_html = `oitavas_${i * 2}`
+            const id_html2 = `oitavas_${(i * 2) + 1}`
+            const elementohtml = document.getElementById(id_html)
+            const elementohtml_2 = document.getElementById(id_html2)
+            elementohtml.innerHTML = selecoes[i].nome
+            elementohtml_2.innerHTML = selecoes[selecoes.length - 1 - i].nome
+
+            let pontuacao_axl_a = 0
+            let pontuacao_axl_b = 0
+            for (let j = 0; j < 10; j++) {
+                num_axl_a = Math.random() * (100 - 0 + 1) + 0;
+                pontuacao_axl_a += num_axl_a
+
+                num_axl_b = Math.random() * (100 - 0 + 1) + 0;
+                pontuacao_axl_b += num_axl_b
+            }
+            pontuacao_a += pontuacao_axl_a
+            pontuacao_b += pontuacao_axl_b
+
+
+            if (pontuacao_a > pontuacao_b) {
+                vetor_axl.push(nome_a)
+                vetor_pontuacao.push(pontuacao_a)
+            }
+            else {
+                vetor_axl.push(nome_b)
+                vetor_pontuacao.push(pontuacao_b)
+            }
+        }
+        for (let i = 0; i < 4; i++) {
+            nome_a = vetor_axl[i]
+            nome_b = vetor_axl[vetor_axl.length - 1 - i]
+            pontuacao_a = vetor_pontuacao[i]
+            pontuacao_b = vetor_pontuacao[vetor_axl.length - 1 - i]
+            const id_quartas = `quartas_${i * 2}`
+            const id_quartas_2 = `quartas_${(i * 2) + 1}`
+            const elementohtml_quartas = document.getElementById(id_quartas)
+            const elementohtml_quartas_2 = document.getElementById(id_quartas_2)
+            elementohtml_quartas.innerHTML = nome_a
+            elementohtml_quartas_2.innerHTML = nome_b
+
+            let pontuacao_axl_a = 0
+            let pontuacao_axl_b = 0
+            for (let j = 0; j < 10; j++) {
+                num_axl_a = Math.random() * (100 - 0 + 1) + 0;
+                pontuacao_axl_a += num_axl_a
+
+                num_axl_b = Math.random() * (100 - 0 + 1) + 0;
+                pontuacao_axl_b += num_axl_b
+            }
+            pontuacao_a += pontuacao_axl_a
+            pontuacao_b += pontuacao_axl_b
+
+
+            if (pontuacao_a > pontuacao_b) {
+                vetor_axl_semi.push(nome_a)
+                vetor_pontuacao_semi.push(pontuacao_a)
+            }
+            else {
+                vetor_axl_semi.push(nome_b)
+                vetor_pontuacao_semi.push(pontuacao_b)
+            }
+        }
+        for (let i = 0; i < 2; i++) {
+            nome_a = vetor_axl_semi[i]
+            nome_b = vetor_axl_semi[vetor_axl_semi.length - 1 - i]
+            pontuacao_a = vetor_pontuacao_semi[i]
+            pontuacao_b = vetor_pontuacao_semi[vetor_pontuacao_semi.length - 1 - i]
+            const id_semi = `semifinal_${i * 2}`
+            const id_semi_2 = `semifinal_${(i * 2) + 1}`
+            const elementohtml_semi = document.getElementById(id_semi)
+            const elementohtml_semi_2 = document.getElementById(id_semi_2)
+            elementohtml_semi.innerHTML = nome_a
+            elementohtml_semi_2.innerHTML = nome_b
+
+            let pontuacao_axl_a = 0
+            let pontuacao_axl_b = 0
+            for (let j = 0; j < 10; j++) {
+                num_axl_a = Math.random() * (100 - 0 + 1) + 0;
+                pontuacao_axl_a += num_axl_a
+
+                num_axl_b = Math.random() * (100 - 0 + 1) + 0;
+                pontuacao_axl_b += num_axl_b
+            }
+            pontuacao_a += pontuacao_axl_a
+            pontuacao_b += pontuacao_axl_b
+
+
+            if (pontuacao_a > pontuacao_b) {
+                vetor_axl_final.push(nome_a)
+                vetor_pontuacao_final.push(pontuacao_a)
+            }
+            else {
+                vetor_axl_final.push(nome_b)
+                vetor_pontuacao_final.push(pontuacao_b)
+            }
+        }
+
+         for (let i = 0; i < 1; i++) {
+            nome_a = vetor_axl_final[i]
+            nome_b = vetor_axl_final[vetor_axl_final.length - 1 - i]
+            pontuacao_a = vetor_pontuacao_final[i]
+            pontuacao_b = vetor_pontuacao_final[vetor_pontuacao_final.length - 1 - i]
+            const id_final = `final_${i * 2}`
+            const id_final_2 = `final_${(i * 2) + 1}`
+            const elementohtml_final = document.getElementById(id_final)
+            const elementohtml_final_2 = document.getElementById(id_final_2)
+            elementohtml_final.innerHTML = nome_a
+            elementohtml_final_2.innerHTML = nome_b
+
+            let pontuacao_axl_a = 0
+            let pontuacao_axl_b = 0
+            for (let j = 0; j < 10; j++) {
+                num_axl_a = Math.random() * (100 - 0 + 1) + 0;
+                pontuacao_axl_a += num_axl_a
+
+                num_axl_b = Math.random() * (100 - 0 + 1) + 0;
+                pontuacao_axl_b += num_axl_b
+            }
+            pontuacao_a += pontuacao_axl_a
+            pontuacao_b += pontuacao_axl_b
+
+
+            if (pontuacao_a > pontuacao_b) {
+                campeao.innerHTML = `${nome_a}`
+            }
+            else {
+                campeao.innerHTML = `${nome_b}`
+            }
+        }
+    }
+</script>
