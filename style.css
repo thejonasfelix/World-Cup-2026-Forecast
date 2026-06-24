@@ -1,16 +1,7 @@
 body{
     width: 100%;
     height: 100%;
-    background-color:rgb(1, 16, 111);
-}
-
-.fundo p{
-    text-align: center;
-    color: white;
-    font-size: 23px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 5%;
+    background-color: white;
 }
 
 .cards{
@@ -21,10 +12,19 @@ body{
     margin-top: 8%;
 }
 
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 8%;
+}
+
+
 .resultado{
     border: 2px solid black;
     border-radius: 6px;
-    background: linear-gradient(black, blue);
+    background-color: white;
     width: fit-content;
     padding: 30px;
 }
@@ -40,11 +40,10 @@ body{
     border: 2px solid white;
     border-radius: 6px;
     padding: 5px;
-    margin-left: 35%;
 }
 
 .btn-formulario:hover{
-    background-color: blue;
+    background-color: rgba(47, 47, 47, 0.956);
     transform: translateY(10);
     box-shadow:  0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -62,8 +61,101 @@ body{
     color: white;
     border: 2px solid black;
     border-radius: 6px;
-    background: linear-gradient(black, blue);
+    background-color: white;
     width: 70vw;
     height: fit-content;
-    padding: 30px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resultados p{
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.resultados h2{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid white;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 10px;
+}
+
+.final{
+    width: fit-content;
+    border-radius: 8px;
+    padding: 10px;
+    color: black;
+}
+
+.final h2{
+    color: rgb(166, 142, 5);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    width: fit-content;
+    padding: 10px;
+}
+
+.final p{
+    width: fit-content;
+    padding: 10px;
+    border: 2px solid ;
+    border-radius: 8px;
+    background-color: rgb(166, 142, 5);
+    color: white;
+}
+
+.semi{
+    width: fit-content;
+    padding: 10px;
+    color: black;
+}
+
+.semi p{
+    width: fit-content;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.quartas{
+    width: fit-content;
+    padding: 10px;
+    color: black;
+}
+
+.quartas p{
+    width: fit-content;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.oitavas{
+    width: fit-content;
+    padding: 10px;
+    color: black;
+}
+.oitavas p{
+    width: fit-content;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.campeao{
+    color: rgb(166, 142, 5);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }

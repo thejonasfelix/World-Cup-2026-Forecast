@@ -9,39 +9,50 @@
 </head>
 
 <body>
-    <div class="fundo">
-        <p>WORLD CUP 2026 Forecast</p>
+        <h1 class="logo">WORLD CUP 2026 Forecast</h1>
         <div class="cards">
             <div class="resultado">
-                <p id="campeao"><br>é a campeã do mundo</p>
+                <p id="campeao"></p>
                 <button onclick="simular()" class="btn-formulario">Simular</button>
             </div>
         </div>
 
         <div class="card-resultados">
             <div class="resultados">
-                <p>Final</p>
-                <p id="final_0"></p> x <p id="final_1"></p> <br>
-                <p>Semi-Final</p>
-                <p id="semifinal_0"></p> x <p id="semifinal_1"></p> <br>
-                <p id="semifinal_2"></p> x <p id="semifinal_3"></p> <br>
-                <p>Quartas</p>
-                <p id="quartas_0"></p> x <p id="quartas_1"></p> <br>
-                <p id="quartas_2"></p> x <p id="quartas_3"></p> <br>
-                <p id="quartas_4"></p> x <p id="quartas_5"></p> <br>
-                <p id="quartas_6"></p> x <p id="quartas_7"></p> <br>
-                <p>Oitavas</p>
-                <p id="oitavas_0"></p> x <p id="oitavas_1"></p> <br>
-                <p id="oitavas_2"></p> x <p id="oitavas_3"></p> <br>
-                <p id="oitavas_4"></p> x <p id="oitavas_5"></p> <br>
-                <p id="oitavas_6"></p> x <p id="oitavas_7"></p> <br>
-                <p id="oitavas_8"></p> x <p id="oitavas_9"></p> <br>
-                <p id="oitavas_10"></p> x <p id="oitavas_11"></p> <br>
-                <p id="oitavas_12"></p> x <p id="oitavas_13"></p> <br>
-                <p id="oitavas_14"></p> x <p id="oitavas_15"></p>
+
+                <div class="final">
+                    <h2>Finalíssima</h2>
+                    <p id="final_0"></p> x <p id="final_1"></p> <br>
+                </div>
+
+                <div class="semi">
+                    <h2>Semi-Final</h2>
+                    <p id="semifinal_0"></p> x <p id="semifinal_1"></p> <br>
+                    <p id="semifinal_2"></p> x <p id="semifinal_3"></p> <br>
+                </div>
+
+                <div class="quartas">
+                    <h2>Quartas de Final</h2>
+                    <p id="quartas_0"></p> x <p id="quartas_1"></p> <br>
+                    <p id="quartas_2"></p> x <p id="quartas_3"></p> <br>
+                    <p id="quartas_4"></p> x <p id="quartas_5"></p> <br>
+                    <p id="quartas_6"></p> x <p id="quartas_7"></p> <br>
+                </div>
+
+                <div class="oitavas">
+                    <h2>Oitavas de Final</h2>
+                    <p id="oitavas_0"></p> x <p id="oitavas_1"></p> <br>
+                    <p id="oitavas_2"></p> x <p id="oitavas_3"></p> <br>
+                    <p id="oitavas_4"></p> x <p id="oitavas_5"></p> <br>
+                    <p id="oitavas_6"></p> x <p id="oitavas_7"></p> <br>
+                    <p id="oitavas_8"></p> x <p id="oitavas_9"></p> <br>
+                    <p id="oitavas_10"></p> x <p id="oitavas_11"></p> <br>
+                    <p id="oitavas_12"></p> x <p id="oitavas_13"></p> <br>
+                    <p id="oitavas_14"></p> x <p id="oitavas_15"></p>
+                </div>
+
             </div>
         </div>
-    </div>
 </body>
 
 </html>
@@ -60,55 +71,55 @@
     },
     {
         "nome": "Inglaterra",
-        "overall": 88
+        "overall": 85
     },
     {
         "nome": "Brasil",
-        "overall": 80
-    },
-    {
-        "nome": "Marrocos",
         "overall": 75
     },
     {
-        "nome": "Holanda",
-        "overall": 71
-    },
-    {
-        "nome": "Alemanha",
+        "nome": "Marrocos",
         "overall": 70
     },
     {
+        "nome": "Holanda",
+        "overall": 69
+    },
+    {
+        "nome": "Alemanha",
+        "overall": 69
+    },
+    {
         "nome": "Portugal",
-        "overall": 68
+        "overall": 69
     },
     {
         "nome": "Bélgica",
-        "overall": 65
+        "overall": 50
     },
     {
         "nome": "México",
-        "overall": 60
+        "overall": 45
     },
     {
         "nome": "Colombia",
-        "overall": 59
+        "overall": 45
     },
     {
         "nome": "USA",
-        "overall": 55
+        "overall": 45
     },
     {
         "nome": "Croácia",
-        "overall": 54
+        "overall": 40
     },
     {
         "nome": "Japão",
-        "overall": 53
+        "overall": 45
     },
     {
         "nome": "Suiça",
-        "overall": 50
+        "overall": 30
     }]
 
     function simular() {
@@ -209,15 +220,14 @@
             let pontuacao_axl_a = 0
             let pontuacao_axl_b = 0
             for (let j = 0; j < 10; j++) {
-                num_axl_a = Math.random() * (100 - 0 + 1) + 0;
+                num_axl_a = Math.floor(Math.random() * (100 - 0 + 1) + 0);
                 pontuacao_axl_a += num_axl_a
 
-                num_axl_b = Math.random() * (100 - 0 + 1) + 0;
+                num_axl_b = Math.floor(Math.random() * (100 - 0 + 1) + 0);
                 pontuacao_axl_b += num_axl_b
             }
             pontuacao_a += pontuacao_axl_a
             pontuacao_b += pontuacao_axl_b
-
 
             if (pontuacao_a > pontuacao_b) {
                 vetor_axl_final.push(nome_a)
@@ -229,7 +239,7 @@
             }
         }
 
-         for (let i = 0; i < 1; i++) {
+        for (let i = 0; i < 1; i++) {
             nome_a = vetor_axl_final[i]
             nome_b = vetor_axl_final[vetor_axl_final.length - 1 - i]
             pontuacao_a = vetor_pontuacao_final[i]
@@ -255,10 +265,10 @@
 
 
             if (pontuacao_a > pontuacao_b) {
-                campeao.innerHTML = `${nome_a}`
+                campeao.innerHTML = `<div class="campeao"><b>${nome_a}</b><br>é a campeã do mundo</div>`
             }
             else {
-                campeao.innerHTML = `${nome_b}`
+                campeao.innerHTML = `<div class="campeao"><b>${nome_b}</b><br>é a campeã do mundo</div>`
             }
         }
     }
