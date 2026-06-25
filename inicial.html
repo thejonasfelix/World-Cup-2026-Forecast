@@ -9,117 +9,133 @@
 </head>
 
 <body>
-        <h1 class="logo">WORLD CUP 2026 Forecast</h1>
-        <div class="cards">
-            <div class="resultado">
-                <p id="campeao"></p>
-                <button onclick="simular()" class="btn-formulario">Simular</button>
-            </div>
+    <h1 class="logo">WORLD CUP 2026 Forecast</h1>
+    <div class="cards">
+        <div class="resultado">
+            <p id="campeao"></p>
+            <button onclick="simular()" class="btn-formulario">Simular</button>
         </div>
+    </div>
 
-        <div class="card-resultados">
-            <div class="resultados">
+    <div class="card-resultados">
+        <div class="resultados">
 
-                <div class="final">
-                    <h2>Finalíssima</h2>
-                    <p id="final_0"></p> x <p id="final_1"></p> <br>
-                </div>
-
-                <div class="semi">
-                    <h2>Semi-Final</h2>
-                    <p id="semifinal_0"></p> x <p id="semifinal_1"></p> <br>
-                    <p id="semifinal_2"></p> x <p id="semifinal_3"></p> <br>
-                </div>
-
-                <div class="quartas">
-                    <h2>Quartas de Final</h2>
-                    <p id="quartas_0"></p> x <p id="quartas_1"></p> <br>
-                    <p id="quartas_2"></p> x <p id="quartas_3"></p> <br>
-                    <p id="quartas_4"></p> x <p id="quartas_5"></p> <br>
-                    <p id="quartas_6"></p> x <p id="quartas_7"></p> <br>
-                </div>
-
-                <div class="oitavas">
-                    <h2>Oitavas de Final</h2>
-                    <p id="oitavas_0"></p> x <p id="oitavas_1"></p> <br>
-                    <p id="oitavas_2"></p> x <p id="oitavas_3"></p> <br>
-                    <p id="oitavas_4"></p> x <p id="oitavas_5"></p> <br>
-                    <p id="oitavas_6"></p> x <p id="oitavas_7"></p> <br>
-                    <p id="oitavas_8"></p> x <p id="oitavas_9"></p> <br>
-                    <p id="oitavas_10"></p> x <p id="oitavas_11"></p> <br>
-                    <p id="oitavas_12"></p> x <p id="oitavas_13"></p> <br>
-                    <p id="oitavas_14"></p> x <p id="oitavas_15"></p>
-                </div>
-
+            <div class="final">
+                <h2>Finalíssima</h2>
+                <p><span id="final_0"></span><br> x <br><span id="final_1"></span></p><br>
             </div>
+
+            <div class="semi">
+                <h2>Semi-Final</h2>
+                <p><span id="semifinal_0"></span><br> x <br><span id="semifinal_1"></span></p><br>
+                <p><span id="semifinal_2"></span><br> x <br><span id="semifinal_3"></span></p><br>
+            </div>
+
+            <div class="quartas">
+                <h2>Quartas de Final</h2>
+                <p> <span id="quartas_0"></span><br> x <br><span id="quartas_1"></span></p> <br>
+                <p> <span id="quartas_2"></span><br> x <br><span id="quartas_3"></span></p> <br>
+                <p> <span id="quartas_4"></span><br> x <br><span id="quartas_5"></span></p> <br>
+                <p> <span id="quartas_6"></span><br> x <br><span id="quartas_7"></span></p> <br>
+            </div>
+
+            <div class="oitavas">
+                <h2>Oitavas de Final</h2>
+                <p><span id="oitavas_0"></span><br> x <br><span id="oitavas_1"></span></p> <br>
+                <p><span id="oitavas_2"></span><br> x <br><span id="oitavas_3"></span></p> <br>
+                <p><span id="oitavas_4"></span><br> x <br><span id="oitavas_5"></span></p> <br>
+                <p><span id="oitavas_6"></span><br> x <br><span id="oitavas_7"></span></p> <br>
+                <p><span id="oitavas_8"></span><br> x <br><span id="oitavas_9"></span></p> <br>
+                <p><span id="oitavas_10"></span><br> x <br><span id="oitavas_11"></span></p> <br>
+                <p><span id="oitavas_12"></span><br> x <br><span id="oitavas_13"></span></p> <br>
+                <p><span id="oitavas_14"></span><br> x <br><span id="oitavas_15"></span></p>
+            </div>
+
         </div>
+    </div>
 </body>
 
 </html>
 <script>
     selecoes = [{
         "nome": "França",
-        "overall": 99
+        "overall": 99,
+        "bandeira": "../img/franca.jpg"
     },
     {
         "nome": "Argentina",
-        "overall": 95
+        "overall": 95,
+        "bandeira": "./img/argentina.jpg"
     },
     {
         "nome": "Espanha",
-        "overall": 93
+        "overall": 93,
+        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg"
     },
     {
         "nome": "Inglaterra",
-        "overall": 85
+        "overall": 85,
+        "bandeira": "https://img.freepik.com/vetores-premium/bandeira-da-inglaterra-com-efeito-de-ondulacao-proporcao-oficial_292608-1112.jpg"
     },
     {
         "nome": "Brasil",
-        "overall": 75
+        "overall": 75,
+        "bandeira": "https://img.magnific.com/vetores-gratis/ilustracao-de-bandeira-brasil_53876-27017.jpg?semt=ais_hybrid&w=740&q=80"
     },
     {
         "nome": "Marrocos",
-        "overall": 70
+        "overall": 70,
+        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
     },
     {
         "nome": "Holanda",
-        "overall": 69
+        "overall": 69,
+        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg"
     },
     {
         "nome": "Alemanha",
-        "overall": 69
+        "overall": 69,
+        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg"
     },
     {
         "nome": "Portugal",
-        "overall": 69
+        "overall": 69,
+        "bandeira": "https://s1.static.brasilescola.uol.com.br/be/2022/10/bandeira-portugal-2.jpg"
     },
     {
         "nome": "Bélgica",
-        "overall": 50
+        "overall": 50,
+        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg"
     },
     {
         "nome": "México",
-        "overall": 45
+        "overall": 45,
+        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/330px-Flag_of_Mexico.svg.png"
     },
     {
         "nome": "Colombia",
-        "overall": 45
+        "overall": 45,
+        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/330px-Flag_of_Colombia.svg.png"
     },
     {
         "nome": "USA",
-        "overall": 45
+        "overall": 45,
+        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
     },
     {
         "nome": "Croácia",
-        "overall": 40
+        "overall": 40,
+        "bandeira": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsTRiuzxX8n7grIpcNS6qIqVW-Cf2aZhQCRA&s"
     },
     {
         "nome": "Japão",
-        "overall": 45
+        "overall": 45,
+        "bandeira": "https://s4.static.brasilescola.uol.com.br/be/2022/11/bandeira-do-japao.jpg"
     },
     {
         "nome": "Suiça",
-        "overall": 30
+        "overall": 30,
+        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/250px-Flag_of_Switzerland_%28Pantone%29.svg.png"
     }]
 
     function simular() {
@@ -129,12 +145,17 @@
         let pontuacao_axl_b = 0
         let nome_a = ""
         let nome_b = ""
+        let bandeira_a = ""
+        let bandeira_b = ""
         let vetor_axl = []
         let vetor_pontuacao = []
+        let vetor_bandeira = []
         let vetor_axl_semi = []
         let vetor_pontuacao_semi = []
+        let vetor_bandeira_semi = []
         let vetor_axl_final = []
         let vetor_pontuacao_final = []
+        let vetor_bandeira_final = []
 
 
         for (let i = 0; i < 8; i++) {
@@ -142,12 +163,14 @@
             nome_b = selecoes[selecoes.length - 1 - i].nome
             pontuacao_a = selecoes[i].overall
             pontuacao_b = selecoes[selecoes.length - 1 - i].overall
+            bandeira_a = selecoes[i].bandeira
+            bandeira_b = selecoes[selecoes.length - 1 - i].bandeira
             const id_html = `oitavas_${i * 2}`
             const id_html2 = `oitavas_${(i * 2) + 1}`
             const elementohtml = document.getElementById(id_html)
             const elementohtml_2 = document.getElementById(id_html2)
-            elementohtml.innerHTML = selecoes[i].nome
-            elementohtml_2.innerHTML = selecoes[selecoes.length - 1 - i].nome
+            elementohtml.innerHTML = selecoes[i].nome + " " + selecoes[i].bandeira
+            elementohtml_2.innerHTML = selecoes[selecoes.length - 1 - i].nome + " " + selecoes[selecoes.length - 1 - i].bandeira
 
             let pontuacao_axl_a = 0
             let pontuacao_axl_b = 0
@@ -165,10 +188,12 @@
             if (pontuacao_a > pontuacao_b) {
                 vetor_axl.push(nome_a)
                 vetor_pontuacao.push(pontuacao_a)
+                vetor_bandeira.push(bandeira_a)
             }
             else {
                 vetor_axl.push(nome_b)
                 vetor_pontuacao.push(pontuacao_b)
+                vetor_bandeira.push(bandeira_b)
             }
         }
         for (let i = 0; i < 4; i++) {
@@ -176,12 +201,14 @@
             nome_b = vetor_axl[vetor_axl.length - 1 - i]
             pontuacao_a = vetor_pontuacao[i]
             pontuacao_b = vetor_pontuacao[vetor_axl.length - 1 - i]
+            bandeira_a = vetor_bandeira[i]
+            bandeira_b = vetor_bandeira[vetor_axl.length - 1 - i]
             const id_quartas = `quartas_${i * 2}`
             const id_quartas_2 = `quartas_${(i * 2) + 1}`
             const elementohtml_quartas = document.getElementById(id_quartas)
             const elementohtml_quartas_2 = document.getElementById(id_quartas_2)
-            elementohtml_quartas.innerHTML = nome_a
-            elementohtml_quartas_2.innerHTML = nome_b
+            elementohtml_quartas.innerHTML = nome_a + " " + bandeira_a
+            elementohtml_quartas_2.innerHTML = nome_b + " " + bandeira_b
 
             let pontuacao_axl_a = 0
             let pontuacao_axl_b = 0
@@ -199,10 +226,12 @@
             if (pontuacao_a > pontuacao_b) {
                 vetor_axl_semi.push(nome_a)
                 vetor_pontuacao_semi.push(pontuacao_a)
+                vetor_bandeira_semi.push(bandeira_a)
             }
             else {
                 vetor_axl_semi.push(nome_b)
                 vetor_pontuacao_semi.push(pontuacao_b)
+                vetor_bandeira_semi.push(bandeira_b)
             }
         }
         for (let i = 0; i < 2; i++) {
@@ -210,12 +239,14 @@
             nome_b = vetor_axl_semi[vetor_axl_semi.length - 1 - i]
             pontuacao_a = vetor_pontuacao_semi[i]
             pontuacao_b = vetor_pontuacao_semi[vetor_pontuacao_semi.length - 1 - i]
+            bandeira_a = vetor_bandeira_semi[i]
+            bandeira_b = vetor_bandeira_semi[vetor_bandeira_semi.length - 1 - i]
             const id_semi = `semifinal_${i * 2}`
             const id_semi_2 = `semifinal_${(i * 2) + 1}`
             const elementohtml_semi = document.getElementById(id_semi)
             const elementohtml_semi_2 = document.getElementById(id_semi_2)
-            elementohtml_semi.innerHTML = nome_a
-            elementohtml_semi_2.innerHTML = nome_b
+            elementohtml_semi.innerHTML = nome_a + " " + bandeira_a
+            elementohtml_semi_2.innerHTML = nome_b + " " + bandeira_b
 
             let pontuacao_axl_a = 0
             let pontuacao_axl_b = 0
@@ -232,10 +263,12 @@
             if (pontuacao_a > pontuacao_b) {
                 vetor_axl_final.push(nome_a)
                 vetor_pontuacao_final.push(pontuacao_a)
+                vetor_bandeira_final.push(bandeira_a)
             }
             else {
                 vetor_axl_final.push(nome_b)
                 vetor_pontuacao_final.push(pontuacao_b)
+                vetor_bandeira_final.push(bandeira_b)
             }
         }
 
@@ -244,12 +277,14 @@
             nome_b = vetor_axl_final[vetor_axl_final.length - 1 - i]
             pontuacao_a = vetor_pontuacao_final[i]
             pontuacao_b = vetor_pontuacao_final[vetor_pontuacao_final.length - 1 - i]
+            bandeira_a = vetor_bandeira_final[i]
+            bandeira_b = vetor_bandeira_final[vetor_bandeira_final.length - 1 - i]
             const id_final = `final_${i * 2}`
             const id_final_2 = `final_${(i * 2) + 1}`
             const elementohtml_final = document.getElementById(id_final)
             const elementohtml_final_2 = document.getElementById(id_final_2)
-            elementohtml_final.innerHTML = nome_a
-            elementohtml_final_2.innerHTML = nome_b
+            elementohtml_final.innerHTML = nome_a + " " + bandeira_a
+            elementohtml_final_2.innerHTML = nome_b + " " + bandeira_b
 
             let pontuacao_axl_a = 0
             let pontuacao_axl_b = 0
@@ -265,10 +300,10 @@
 
 
             if (pontuacao_a > pontuacao_b) {
-                campeao.innerHTML = `<div class="campeao"><b>${nome_a}</b><br>é a campeã do mundo</div>`
+                campeao.innerHTML = `<div class="campeao"><b>${nome_a}</b> ${bandeira_a}<br>é a campeã do mundo</div>`
             }
             else {
-                campeao.innerHTML = `<div class="campeao"><b>${nome_b}</b><br>é a campeã do mundo</div>`
+                campeao.innerHTML = `<div class="campeao"><b>${nome_b}</b> ${bandeira_b}<br>é a campeã do mundo</div>`
             }
         }
     }
