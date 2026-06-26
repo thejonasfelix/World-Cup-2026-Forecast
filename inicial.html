@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1 class="logo">WORLD CUP 2026 Forecast</h1>
+        <img class="logo" src="./img/logo.png" alt="logo">
     <div class="cards">
         <div class="resultado">
             <p id="campeao"></p>
@@ -60,82 +60,82 @@
     selecoes = [{
         "nome": "França",
         "overall": 99,
-        "bandeira": "../img/franca.jpg"
+        "bandeira": "./img/fra.gif"
     },
     {
         "nome": "Argentina",
         "overall": 95,
-        "bandeira": "./img/argentina.jpg"
+        "bandeira": "./img/arg.gif"
     },
     {
         "nome": "Espanha",
         "overall": 93,
-        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg"
+        "bandeira": "./img/spain.gif"
     },
     {
         "nome": "Inglaterra",
         "overall": 85,
-        "bandeira": "https://img.freepik.com/vetores-premium/bandeira-da-inglaterra-com-efeito-de-ondulacao-proporcao-oficial_292608-1112.jpg"
+        "bandeira": "./img/ing.gif"
     },
     {
         "nome": "Brasil",
         "overall": 75,
-        "bandeira": "https://img.magnific.com/vetores-gratis/ilustracao-de-bandeira-brasil_53876-27017.jpg?semt=ais_hybrid&w=740&q=80"
+        "bandeira": "./img/bra.gif"
     },
     {
         "nome": "Marrocos",
         "overall": 70,
-        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+        "bandeira": "./img/mar.gif"
     },
     {
         "nome": "Holanda",
         "overall": 69,
-        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg"
+        "bandeira": "./img/hol.gif"
     },
     {
         "nome": "Alemanha",
         "overall": 69,
-        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg"
+        "bandeira": "./img/ger.gif"
     },
     {
         "nome": "Portugal",
         "overall": 69,
-        "bandeira": "https://s1.static.brasilescola.uol.com.br/be/2022/10/bandeira-portugal-2.jpg"
+        "bandeira": "./img/port.gif"
     },
     {
         "nome": "Bélgica",
         "overall": 50,
-        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg"
+        "bandeira": "./img/bel.gif"
     },
     {
         "nome": "México",
         "overall": 45,
-        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/330px-Flag_of_Mexico.svg.png"
+        "bandeira": "./img/mex.gif"
     },
     {
         "nome": "Colombia",
         "overall": 45,
-        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/330px-Flag_of_Colombia.svg.png"
+        "bandeira": "./img/col.gif"
     },
     {
         "nome": "USA",
         "overall": 45,
-        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
+        "bandeira": "./img/usa.gif"
     },
     {
         "nome": "Croácia",
         "overall": 40,
-        "bandeira": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsTRiuzxX8n7grIpcNS6qIqVW-Cf2aZhQCRA&s"
+        "bandeira": "./img/croa.gif"
     },
     {
         "nome": "Japão",
         "overall": 45,
-        "bandeira": "https://s4.static.brasilescola.uol.com.br/be/2022/11/bandeira-do-japao.jpg"
+        "bandeira": "./img/jap.gif"
     },
     {
         "nome": "Suiça",
         "overall": 30,
-        "bandeira": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/250px-Flag_of_Switzerland_%28Pantone%29.svg.png"
+        "bandeira": "./img/swiss.gif"
     }]
 
     function simular() {
@@ -169,8 +169,8 @@
             const id_html2 = `oitavas_${(i * 2) + 1}`
             const elementohtml = document.getElementById(id_html)
             const elementohtml_2 = document.getElementById(id_html2)
-            elementohtml.innerHTML = selecoes[i].nome + " " + selecoes[i].bandeira
-            elementohtml_2.innerHTML = selecoes[selecoes.length - 1 - i].nome + " " + selecoes[selecoes.length - 1 - i].bandeira
+            elementohtml.innerHTML = `${selecoes[i].nome} <br> <img class="bandeiras" src="${selecoes[i].bandeira}" alt="Bandeira">`
+            elementohtml_2.innerHTML = `${selecoes[selecoes.length - 1 - i].nome} <br> <img class="bandeiras" src="${selecoes[selecoes.length - 1 - i].bandeira}" alt="Bandeira">`
 
             let pontuacao_axl_a = 0
             let pontuacao_axl_b = 0
@@ -207,8 +207,8 @@
             const id_quartas_2 = `quartas_${(i * 2) + 1}`
             const elementohtml_quartas = document.getElementById(id_quartas)
             const elementohtml_quartas_2 = document.getElementById(id_quartas_2)
-            elementohtml_quartas.innerHTML = nome_a + " " + bandeira_a
-            elementohtml_quartas_2.innerHTML = nome_b + " " + bandeira_b
+            elementohtml_quartas.innerHTML =  `${nome_a} <br> <img class="bandeiras" src="${bandeira_a}" alt="Bandeira">`
+            elementohtml_quartas_2.innerHTML = `${nome_b} <br> <img class="bandeiras" src="${bandeira_b}" alt="Bandeira">`
 
             let pontuacao_axl_a = 0
             let pontuacao_axl_b = 0
@@ -245,8 +245,8 @@
             const id_semi_2 = `semifinal_${(i * 2) + 1}`
             const elementohtml_semi = document.getElementById(id_semi)
             const elementohtml_semi_2 = document.getElementById(id_semi_2)
-            elementohtml_semi.innerHTML = nome_a + " " + bandeira_a
-            elementohtml_semi_2.innerHTML = nome_b + " " + bandeira_b
+            elementohtml_semi.innerHTML = `${nome_a} <br> <img class="bandeiras" src="${bandeira_a}" alt="Bandeira">`
+            elementohtml_semi_2.innerHTML = `${nome_b} <br> <img class="bandeiras" src="${bandeira_b}" alt="Bandeira">`
 
             let pontuacao_axl_a = 0
             let pontuacao_axl_b = 0
@@ -283,8 +283,8 @@
             const id_final_2 = `final_${(i * 2) + 1}`
             const elementohtml_final = document.getElementById(id_final)
             const elementohtml_final_2 = document.getElementById(id_final_2)
-            elementohtml_final.innerHTML = nome_a + " " + bandeira_a
-            elementohtml_final_2.innerHTML = nome_b + " " + bandeira_b
+            elementohtml_final.innerHTML = `${nome_a} <br> <img class="bandeiras" src="${bandeira_a}" alt="Bandeira">`
+            elementohtml_final_2.innerHTML = `${nome_b} <br> <img class="bandeiras" src="${bandeira_b}" alt="Bandeira">`
 
             let pontuacao_axl_a = 0
             let pontuacao_axl_b = 0
@@ -300,10 +300,10 @@
 
 
             if (pontuacao_a > pontuacao_b) {
-                campeao.innerHTML = `<div class="campeao"><b>${nome_a}</b> ${bandeira_a}<br>é a campeã do mundo</div>`
+                campeao.innerHTML = `<div class="campeao"><b>${nome_a}</b> <img class="bandeiras" src="${bandeira_a}" alt="Bandeira"><br>é a campeã do mundo</div>`
             }
             else {
-                campeao.innerHTML = `<div class="campeao"><b>${nome_b}</b> ${bandeira_b}<br>é a campeã do mundo</div>`
+                campeao.innerHTML = `<div class="campeao"><b>${nome_b}</b> <img class="bandeiras" src="${bandeira_b}" alt="Bandeira"><br>é a campeã do mundo</div>`
             }
         }
     }
